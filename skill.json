@@ -1,0 +1,39 @@
+{
+  "name": "genpark-agentic-commerce-edi-846-inventory-inquiry-advice-realtime-skill",
+  "version": "1.0.0",
+  "description": "B2B EDI 846 Inventory Inquiry/Advice synchronized stock-level availability & allocation threshold validator.",
+  "category": "agentic_commerce",
+  "author": "GenPark AI",
+  "website": "https://www.genpark.ai",
+  "linkedin": "https://www.linkedin.com/company/92955550",
+  "main": "skills.py",
+  "tools": [
+    {
+      "name": "process_edi_846_inventory_advice",
+      "description": "B2B EDI 846 Inventory Inquiry/Advice synchronized stock-level availability & allocation threshold validator.",
+      "sample_input": {
+        "inventory_feed": [
+          {
+            "sku": "SKU-SOL-100",
+            "on_hand_qty": 450,
+            "allocated_qty": 60,
+            "in_transit_qty": 100
+          },
+          {
+            "sku": "SKU-SOL-200",
+            "on_hand_qty": 35,
+            "allocated_qty": 30,
+            "in_transit_qty": 0
+          },
+          {
+            "sku": "SKU-SOL-300",
+            "on_hand_qty": 1200,
+            "allocated_qty": 150,
+            "in_transit_qty": 400
+          }
+        ],
+        "safety_stock_buffer_pct": 5.0
+      }
+    }
+  ]
+}
